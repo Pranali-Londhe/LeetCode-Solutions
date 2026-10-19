@@ -1,7 +1,9 @@
-# LeetCode Solutions
+# Capgemini TNS LeetCode Solutions 🚀
 
-This repository contains my solutions to LeetCode problems using Java.
+Welcome to my repository of LeetCode solutions written in **Java** as part of my coding practice and learning journey.
 
-I created this repository to practice coding and improve my problem-solving skills.
+This repository helps me strengthen my problem-solving skills, improve logical thinking, and build confidence in writing efficient Java code.
 
-Happy Coding! 🚀
+**Language:** Java ☕
+
+Happy Coding! 💻
