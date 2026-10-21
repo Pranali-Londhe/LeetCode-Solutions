@@ -18,7 +18,6 @@ class Solution {
             }
             image[r][c] = color;
 
-        // Spread up, down, left, and right
         fill(image, r - 1, c, originalColor, color);
         fill(image, r + 1, c, originalColor, color);
         fill(image, r, c - 1, originalColor, color);
