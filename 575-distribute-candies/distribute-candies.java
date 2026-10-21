@@ -1,13 +1,14 @@
+
 import java.util.*;
 
 class Solution {
     public int distributeCandies(int[] candyType) {
-        HashMap<Integer, Integer> map = new HashMap<>();
+        Set<Integer> set = new HashSet<>();
 
         for (int candy : candyType) {
-            map.put(candy, 1);
+            set.add(candy);
         }
 
-        return Math.min(map.size(), candyType.length / 2);
+        return Math.min(set.size(), candyType.length / 2);
     }
 }
