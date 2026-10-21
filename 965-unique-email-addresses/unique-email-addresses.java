@@ -1,26 +1,27 @@
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 class Solution {
     public int numUniqueEmails(String[] emails) {
         Set<String> set = new HashSet<>();
 
         for (String email : emails) {
-            String[] parts = email.split("@");
-            String local = parts[0];
-            String domain = parts[1];
+            StringBuilder local = new StringBuilder();
+            int i = 0;
 
-            int plusIndex = local.indexOf('+');
-
-            if (plusIndex != -1) {
-                local = local.substring(0, plusIndex);
+            while (email.charAt(i) != '@' && email.charAt(i) != '+') {
+                if (email.charAt(i) != '.') {
+                    local.append(email.charAt(i));
+                }
+                i++;
             }
 
-            local = local.replace(".", "");
+            while (email.charAt(i) != '@') {
+                i++;
+            }
 
-            String uniqueEmail = local + "@" + domain;
-            set.add(uniqueEmail);
+            local.append(email.substring(i));
+            set.add(local.toString());
         }
 
         return set.size();
