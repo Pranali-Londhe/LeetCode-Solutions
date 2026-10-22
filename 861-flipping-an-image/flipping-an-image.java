@@ -7,7 +7,7 @@ class Solution {
             int right = n - 1;
             
             while (left <= right) {
-                // Swap and invert simultaneously using XOR ^ 1
+               
                 int temp = row[left] ^ 1;
                 row[left] = row[right] ^ 1;
                 row[right] = temp;
